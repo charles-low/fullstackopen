@@ -1,0 +1,8 @@
+note over browser:
+browser starts executing js-code and prevented the form from submitting to server immediately
+it created the note object and push note into notes array
+the input field of new note is cleared, and then redrawNotes() is called to rerender and replace the notes on the #notes element.
+finally sned the new note objectt o server via XMLHttpRequest
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: HTTP STATUS 201 with JSON response message "note created"
